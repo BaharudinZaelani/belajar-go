@@ -67,3 +67,15 @@ func mapData() {
 	ibukota["Indonesia"] = "Jakarta"
 	fmt.Println(ibukota)
 }
+
+func main() {
+	// Comma-Ok Idiom
+	nilai := map[string]int{
+		"Bahar": 85,
+	}
+	
+	skorBahar, adaBahar := nilai["Bahar"]
+	fmt.Println(skorBahar, adaBahar)
+	skorBudi, adaBudi := nilai["budi"]
+	fmt.Println(skorBudi, adaBudi)
+}
