@@ -68,7 +68,7 @@ func mapData() {
 	fmt.Println(ibukota)
 }
 
-func main() {
+func commaIdiom() {
 	// Comma-Ok Idiom
 	nilai := map[string]int{
 		"Bahar": 85,
@@ -78,4 +78,17 @@ func main() {
 	fmt.Println(skorBahar, adaBahar)
 	skorBudi, adaBudi := nilai["budi"]
 	fmt.Println(skorBudi, adaBudi)
+}
+
+func main() {
+	// Nested Array
+	dataSiswa := []map[string]interface{}{
+		{
+			"nama": "Budi",
+			"umur": 17,
+			"hobi": []string{"Membaca", "Bersepeda"},
+		},
+	}
+
+	fmt.Println(dataSiswa[0])
 }
