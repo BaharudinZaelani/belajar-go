@@ -2,6 +2,53 @@ package main
 
 import "fmt"
 
-func main() {
-	fmt.Println("Array")
+func array() {
+	// Deklarasi dengan ukuran (nill/zero value)
+	var buah [3]string
+	buah[0] = "Apple"
+	buah[1] = "Jeruk"
+	buah[2] = "Mangga"
+
+	// Mengubah data
+	// buah[0] = "Durian"
+
+	// Deklarasi langsung
+	// angka := [3]int{10,20,30}
+	// fmt.Println(angka)
+
+	// Deklarasi tanpa ukuran (otomatis dihitung untuk jumlahnya)
+	// hobi := [...]string{"Coding", "Gaming", "Membaca"}
+	// fmt.Println(hobi)
+	// fmt.Println("jumlah hobi:", len(hobi))
+
+	// Menyalin Array
+	buahBaru := buah
+	buahBaru[1] = "Durian"
+	fmt.Println(buahBaru)
+	fmt.Println(buah) // array baru tidak mengubah array lama
+
+}
+
+func slice() {
+	// Slice
+	angka := make([]int, 3, 5)
+	fmt.Println(angka)
+	fmt.Println(len(angka)) // panjang slice
+	fmt.Println(cap(angka)) // kapasitas slice
+
+	buah := []string{"Apple", "Jeruk", "Mangga"}
+	fmt.Println(buah)
+	fmt.Println(len(buah))
+	fmt.Println(cap(buah))
+
+	// Append / Menambah data
+	buahBaru := append(buah, "Durian")
+	fmt.Println(buahBaru)
+	fmt.Println(len(buahBaru))
+	fmt.Println(cap(buahBaru))
+
+	// String juga array perlu di konversi menjadi string
+	domisili := "Sukabumi"
+	fmt.Println(string(domisili[0]))
+	fmt.Println(len(domisili))
 }
