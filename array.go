@@ -3,6 +3,7 @@ package main
 import "fmt"
 
 func array() {
+	// Array
 	// Deklarasi dengan ukuran (nill/zero value)
 	var buah [3]string
 	buah[0] = "Apple"
@@ -51,4 +52,18 @@ func slice() {
 	domisili := "Sukabumi"
 	fmt.Println(string(domisili[0]))
 	fmt.Println(len(domisili))
+}
+
+func mapData() {
+	// Map
+	nilaiUjian := map[string]int{
+		"Budi": 85,
+		"Ani": 90,
+		"Joko": 78, // harus ada koma di akhir data
+	}
+	fmt.Println(nilaiUjian)
+	// Map dengan make (function dari go untuk menginisialisasi data ke zero value)
+	ibukota := make(map[string]string)
+	ibukota["Indonesia"] = "Jakarta"
+	fmt.Println(ibukota)
 }
