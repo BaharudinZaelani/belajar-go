@@ -28,7 +28,7 @@ func dataStruct() {
 	fmt.Println(len(dataSiswa))
 }
 
-func main() {
+func structToJson() {
 	dataSiswa := Siswa{
 		Nama: "Budi",
 		Umur: 17,
@@ -42,4 +42,17 @@ func main() {
 	}
 
 	fmt.Println(string(jsonData))
+}
+
+func main() {
+	jsonString := `{"nama": "Ani", "umur": 16}`
+	jsonData := []byte(jsonString)
+	var siswaAni Siswa
+
+	err := json.Unmarshal(jsonData, &siswaAni)
+	if err != nil {
+		fmt.Println("Gagal mengambil unmarshal:", err)
+	}
+
+	fmt.Println(siswaAni)
 }
