@@ -8,10 +8,14 @@ import (
 type Siswa struct {
 	Nama string
 	Umur int
-	Hobi []string `json:"hobi"`
+	nilai int
+	Hobi []string
 }
 func ubahUmur(s *Siswa, umurBaru int) {
 	s.Umur = umurBaru
+}
+func ubahNilai(s *Siswa, nilaiBaru int) {
+	s.nilai = nilaiBaru
 }
 
 func dataStruct() {
