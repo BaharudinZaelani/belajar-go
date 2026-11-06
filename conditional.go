@@ -34,7 +34,7 @@ func checkHari() {
     }
 }
 
-func main() {
+func conditionals() {
 	s1 := Siswa{
 		Nama: "Ani",
 		Umur: 20,
