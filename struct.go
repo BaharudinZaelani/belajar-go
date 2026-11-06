@@ -10,6 +10,8 @@ type Siswa struct {
 	Umur int
 	nilai int
 	Hobi []string
+	piket []string
+	Laptop
 }
 func ubahUmur(s *Siswa, umurBaru int) {
 	s.Umur = umurBaru

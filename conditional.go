@@ -6,6 +6,7 @@ import (
 )
 
 const standarKKM int = 75
+const hariSekarang string = "Senin"
 func checkNilai(s Siswa) string {
 	if s.nilai < standarKKM {
 		return "Tidak Lulus"
@@ -20,6 +21,18 @@ func checkHobi(s Siswa) string {
 		return "dan tidak memiliki hobi"
 	}
 }
+func checkHari() {
+	switch hariSekarang {
+    case "Senin":
+        fmt.Println("Semangat awal pekan!")
+    case "Rabu":
+        fmt.Println("Sudah separuh jalan menuju akhir pekan!")
+    case "Jumat":
+        fmt.Println("Besok sudah akhir pekan!")
+    default:
+        fmt.Println("Hari biasa, tetap semangat!")
+    }
+}
 
 func main() {
 	s1 := Siswa{
@@ -27,9 +40,22 @@ func main() {
 		Umur: 20,
 		nilai: 80,
 		Hobi: []string{"Gaming", "Coding"},
+		piket: []string{
+			"Senin",
+			"Sabtu",
+		},
+		Laptop: Laptop{
+			Merk: "Asus",
+			harga: 4000000,
+			Spesifikasi: Spesifikasi{
+				Ram: 8,
+				Storage: 500,
+			},
+		},
 	}
-	// ubahNilai(&s1, 74)
+	ubahNilai(&s1, 74)
 	fmt.Println(s1.Nama, checkNilai(s1))
-	// fmt.Println(len(s1.Hobi))
 	fmt.Println(checkHobi(s1))
+	fmt.Println("Data Lengkap", s1)
+	checkHari()
 }
