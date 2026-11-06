@@ -44,7 +44,7 @@ func structToJson() {
 	fmt.Println(string(jsonData))
 }
 
-func main() {
+func jsonToStruct() {
 	jsonString := `{"nama": "Ani", "umur": 16}`
 	jsonData := []byte(jsonString)
 	var siswaAni Siswa
@@ -55,4 +55,27 @@ func main() {
 	}
 
 	fmt.Println(siswaAni)
+}
+
+// Embeding Struct
+type Laptop struct {
+	Merk string
+	harga int
+	Spesifikasi
+}
+type Spesifikasi struct {
+	Ram int
+	Storage int
+}
+func embedingStruct() {
+	l1 := Laptop{
+		Merk: "Asus",
+		harga: 4000000,
+		Spesifikasi: Spesifikasi{
+			Ram: 8,
+			Storage: 128,
+		},
+	}
+
+	fmt.Println(l1)
 }
