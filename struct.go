@@ -14,8 +14,7 @@ func ubahUmur(s *Siswa, umurBaru int) {
 	s.Umur = umurBaru
 }
 
-
-func main() {
+func dataStruct() {
 	dataSiswa := []Siswa{
 		{
 			Nama: "Budi",
@@ -27,7 +26,14 @@ func main() {
 	ubahUmur(&dataSiswa[0], 20)
 	fmt.Println(dataSiswa)
 	fmt.Println(len(dataSiswa))
+}
 
+func main() {
+	dataSiswa := Siswa{
+		Nama: "Budi",
+		Umur: 17,
+		Hobi: []string{"Membaca", "Coding"},
+	}
 	// konversi menjadi json
 	jsonData, err := json.Marshal(dataSiswa)
 	if err != nil {
